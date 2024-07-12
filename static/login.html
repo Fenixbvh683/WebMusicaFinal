@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <!-- Agrega aquí tus enlaces a CSS y otros recursos -->
+    <link rel="icon" href="../static/img/disco2.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/style_auth.css">
+
+</head>
+<body>
+    <div class="video-container">
+        <video class="video" autoplay="" muted="" loop="" playsinline="" poster="https://cdn-production.tunecore.com/images/background_video_poster.jpg">
+            <source src="https://cdn-production.tunecore.com/videos/background_video_2023.webm" type="video/mp4">
+        </video>
+    </div>
+    
+    <form class="form"  id="loginForm" action="login.html" method="POST">
+        <div class="encabezado-home-logo">
+            <img src="../static/img/logo.jpg">
+        </div>
+    
+        <div class="form_inputs">
+            <label class="form_label">
+                <input type="email" placeholder=" " class="form_input" name="email" id="email">
+                <span class="form_text">Ingresa tu correo</span>
+            </label>
+            <label class="form_label">
+                <input type="text" placeholder=" " class="form_input" name="password" id="password">
+                <span class="form_text">Ingresa tu contraseña</span>
+            </label>
+        </div>
+
+        <div>
+            <!--<button type="submit" class="form_submit">Login</button>-->
+            <input type="submit" value="Ingresa" class="form_submit">
+        </div>
+
+        <div class="form-footer">
+            <span>No tienes Cuenta?</span>
+            <a style="color: #00ff62;" href="registro_usuarios.html" id="" class="">Crear cuenta</a>
+        </div>
+        <div class="form-footer">
+            <a style="color: #00ff62;" href="home.html" id="" class="">Volver a principal</a>
+        </div>  
+    </form>
+
+    <script>
+        const URL = "http://127.0.0.1:5000/"
+        const loginForm = document.getElementById('loginForm');
+
+        loginForm.addEventListener('submit', function(event) {
+            event.preventDefault(); // Evita el envío del formulario por defecto
+
+            const formData = new FormData(loginForm);
+            fetch(URL + 'login', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => {
+                if (response.ok) {
+                    return response.json();
+                } else {
+                    throw new Error('Error en la autenticación');
+                }
+            })
+            .then(data => {
+                // Redirigir al dashboard u otra página después del inicio de sesión
+                window.location.href = 'dashboard.html';
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Error en la autenticación. Verifica tus credenciales.');
+            });
+        });
+    </script>
+
+</body>
+</html>

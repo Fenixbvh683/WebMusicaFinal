@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Usuario</title>
+    <link rel="icon" href="/static/img/disco2.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/style_auth.css">
+</head>
+<body>
+    <div class="video-container">
+        <video class="video" autoplay="" muted="" loop="" playsinline="" poster="https://cdn-production.tunecore.com/images/background_video_poster.jpg">
+            <source src="https://cdn-production.tunecore.com/videos/background_video_2023.webm" type="video/mp4">
+        </video>
+    </div>
+    
+    <form class="form" id="registerForm">
+        <div class="encabezado-home-logo">
+            <img src="../static/img/logo.jpg">
+        </div>
+        <div class="form_inputs">
+            <label class="form_label">
+                <input type="text" name="nombre" placeholder=" " class="form_input" id="nombre"><span class="form_text">Nombres</span>
+            </label>
+            <label class="form_label">
+                <input type="text" name="apellido" placeholder=" " class="form_input" id="apellido"><span class="form_text">Apellidos</span>
+            </label>
+            <label class="form_label">
+                <input type="email" name="email" placeholder=" " class="form_input" id="email"><span class="form_text">Email</span>
+            </label>
+            <label class="form_label">
+                <input type="password" name="password" placeholder=" " class="form_input" id="password"><span class="form_text">Password</span>
+            </label>
+            <label class="form_label">
+                <input type="password" name="confirm_password" placeholder=" " class="form_input" id="confirm_password"><span class="form_text">Confirmar Password</span>
+            </label>
+            
+            <label class="form_label" for="provincia">Provincia</label>
+            <select name="provincia" class="form_select reskin-select-input" id="provincia" required>
+                <option value="" selected="selected">--- Seleccione ---</option>
+                <!-- Aquí se asumiría que dataProvincias se carga de alguna manera, por ejemplo, a través de una API -->
+            </select>
+        </div>
+        <div>
+            <input type="submit" value="Registrar" class="form_submit">
+        </div>
+
+        <div class="form-footer">
+            <span>Ya tienes Cuenta?</span>
+            <a style="color: #00ff62;" href="login.html" id="" class="">Login</a>
+        </div>
+        <div class="form-footer">
+            <a style="color: #00ff62;" href="home.html" id="" class="">Volver a principal</a>
+        </div>  
+
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+{% include '/dashboard/base.html' %}
+<div class="container">
+    {% block title %} Producto {% endblock %}
+</div>
+
+
+{% block body %}
+
+<div class="container">
+    <table class="table t-center">
+        <tr>
+            <td class="contenedor-centrado"><a href="/altas">Agregar productos</a></td>
+        </tr>
+        <tr>
+            <td class="contenedor-centrado "><a href="/listado">Listar productos</a></td>
+        </tr>
+        <tr>
+            <td class="contenedor-centrado "><a href="/modificaciones">Actualizar productos</a></td>
+        </tr>
+        <tr>
+            <td class="contenedor-centrado "><a href="/listadoEliminar">Eliminar productos</a></td>
+        </tr>
+    </table>
+</div>
+
+{% endblock %}

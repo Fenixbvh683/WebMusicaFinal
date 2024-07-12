@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../static/img/disco2.ico">  
+    <script src="https://kit.fontawesome.com/73dba2e5fe.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../static/css/style_music.css">
+    <title>Music</title>
+</head>
+
+<body class="body-home">
+
+    <header class="header-home">
+
+        <div class="encabezado">
+
+            <div class="encabezado-home-logo">
+                <a href="/"><img src="../static/img/logo.jpg" alt=""></a>
+            </div>
+
+            <section class="encabezado-home-section">
+                <h1>VibraVerso</h1>
+                <h2>El mejor lugar para comprar musica en todos los formato</h2>
+                <hr>
+                <div>
+                    <ul class="encabezado-section-ul">
+                        <li class="encabezado-section-ul-li"><a href="/">Home</a></li>
+                        <li class="encabezado-section-ul-li"><a href="productos_music.html">Productos</a></li>
+                        <li class="encabezado-section-ul-li"><a href="contacto.html">Contacto</a></li>
+                        <li class="encabezado-section-ul-li"><a href="carrito.html">Carrito</a>
+                        <li class="encabezado-section-ul-li"><a href="login.html">Login</a>
+                        <li class="encabezado-section-ul-li"><a href="registro_usuarios.html">Registro</a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <nav class="encabezado-nav">
+                <ul class="encabezado-home-nav-ul">
+                    <li><a href="#"><i class="fa-brands fa-whatsapp"></i></a></li>
+                    <li><a href="#"><i class="fa-solid fa-envelope-open-text"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-square-facebook"></i></a></li>
+                </ul>
+            </nav>
+
+        </div>
+
+    </header>
+
+<main class="main_formulario">
+
+    <h1 class="main_formulario_titulo">Formulario de Contacto Comprador o Vendedor</h1>
+
+    <form id="formulario" class="main_formulario_contenido" action="https://formspree.io/f/xpzvenjg" method="POST">
+
+        <div class="main_formulario_contenido_div">
+            <label class="main_formulario_contenido_label" for="nombre">Nombre</label>
+            <input class="main_formulario_contenido_input" placeholder="   Escriba su NOMBRE"  type="text" name="nombre" id="nombre">
+        </div>
+
+        <div class="main_formulario_contenido_div">
+            <label class="main_formulario_contenido_label" for="apellido">Apellido</label>
+            <input class="main_formulario_contenido_input" placeholder="   Escriba su APELLIDO" type="text" name="apellido" id="apellido">
+        </div>
+
+        <div class="main_formulario_contenido_div">
+            <label class="main_formulario_contenido_label" for="email">E-mail</label>
+            <input class="main_formulario_contenido_input" placeholder="   Escriba su EMAIL" type="email" name="email" id="email">
+        </div>
+
+        <div class="main_formulario_contenido_div">
+            <label class="main_formulario_contenido_label" for="fecha_nac">Fecha de Nacimiento</label>
+            <input class="main_formulario_contenido_input" type="date" name="fecha_nac" id="fecha_nac">
+        </div>
+
+        <div class="main_formulario_contenido_div2">
+            <label class="main_formulario_contenido_label" for="direccion">Direccion</label>
+            <input class="main_formulario_contenido_input" placeholder="   Escriba su DIRECCION" type="text" name="direccion" id="direccion">
+        </div>
+
+        <div class="main_formulario_contenido_div">
+            <label class="main_formulario_contenido_label" for="pago_cobro"> Forma de Pago o Cobro</label>
+            <select class="main_formulario_contenido_input" name="pago_cobro" id="pago_cobro">
+                <option value="" disabled selected></option>
+                <option value="Efectivo">Efectivo</option>
+                <option value="Transferencia">Transferencia</option>
+                <option value="Tarjeta de Credito">Tarjeta de Credito</option>
+                <option value="Tarjeta de Debito">Tarjeta de Debito</option>
+                <option value="Mercado Pago">Mercado Pago</option>
+            </select>
+        </div>
+
+        <div class="main_formulario_contenido_div">
+            <h2 class="main_formulario_contenido_label" name="cliente" id="">Seleccione Interes</h2>
+            <input type="radio" name="cliente" value="comprador"> <p class="main_formulario_contenido_p">Comprador</p>
+            <input type="radio" name="cliente" value="vendedor"> <p class="main_formulario_contenido_p">Vendedor</p>
+        </div>
+
+        <div class="main_formulario_contenido_div">
+            <label class="main_formulario_contenido_label" for="genero">Generos</label>
+            <input type="checkbox" name="genero" value="Rock"><p class="main_formulario_contenido_p">Rock</p>
+            <input type="checkbox" name="genero" value="Cumbia"><p class="main_formulario_contenido_p">Cumbia</p>
+            <input type="checkbox" name="genero" value="Metal"> <p class="main_formulario_contenido_p">Metal</p>
+            <input type="checkbox" name="genero" value="Floklore"> <p class="main_formulario_contenido_p">Folklore</p>
+            <input type="checkbox" name="genero" value="Pistas"> <p class="main_formulario_contenido_p">Pistas</p>
+            <input type="checkbox" name="genero" value="Creaciones Personales"> <p class="main_formulario_contenido_p">Creaciones Personales</p>
+            <input type="checkbox" name="genero" value="Demos"> <p class="main_formulario_contenido_p">Demos</p>
+            <input type="checkbox" name="genero" value="Reggeton"> <p class="main_formulario_contenido_p">Reggeton</p>
+            <input type="checkbox" name="genero" value="Latina"> <p class="main_formulario_contenido_p">Latina</p>
+        </div>
+
+        <div class="main_formulario_contenido_div">
+            <label class="main_formulario_contenido_label" for="comentario">Comentario relevante</label>
+            <textarea class="main_formulario_contenido_textarea" name="comentario" rows="3" cols="3" id="comentario" placeholder="  Escribe tu consulta"></textarea>
+        </div>
+
+       <div class="mensaje_error">
+        <p id="mensajeError"></p>
+       </div>
+
+        <div class="main_formulario_contenido_boton">
+            <input class="main_formulario_contenido_boton_enviar" type="submit" value="Enviar...">
+            <input class="main_formulario_contenido_boton_limpiar" type="reset" value="Limpiar...">
+
+        </div>
+
+    </form>
+
+</main>
+
+<footer class="footer-home">
+
+    <div class="footer-home-section">
+
+        <div>
+            <p>Sucursal CABA</p>
+            <p>Corrientes N° 2598</p>
+            <p>Te.: 1130256984</p>
+            <p>CABA - Argentina</p>
+        </div>
+
+        <div>
+            <p>Sucursal Berazategui</p>
+            <p>Cale 14 N° 1524</p>
+            <p>Te.: 1125987456</p>
+            <p>Berazategui - Argentina</p>
+        </div>
+
+        <div>
+            <p>Sucursal Hurlingham</p>
+            <p>Poeta Rizo N° 2596</p>
+            <p>Tel.: 1132546897</p>
+            <p>Hurlingham - Argentina</p>
+        </div>
+
+    </div>
+
+    <marquee behavior="" direction=""><p>Grupo Universo Musical Online &copy; <span id="current-year"></span></p></marquee>
+
+</footer>
+<script src="../static/js/currentYear.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado de Productos</title>
+    <link rel="stylesheet" href="../static/css/estilos.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar-index">
+            <h1>VibraVerso</h1><br>
+            <h2>El mejor lugar para comprar musica en todos los formato</h2>
+        </nav>
+    </header>
+
+    <div class="logo-centrado">
+        <img src="../static/img/logo.jpg" alt="logo">
+    </div>
+
+    <h1>Listado de Productos del Inventario</h1><br>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Género</th>
+                <th>Nombre</th>
+                <th>Álbum</th>
+                <th>Año</th>
+                <th>Descripción</th>
+                <th>Imagen</th>
+                <th>Precio</th>
+            </tr>
+        </thead>
+        <tbody id="tablaProductos"></tbody>
+    </table><br>
+
+    <div class="contenedor-centrado">
+        <a href="productos_dashboard.html">Menú principal</a>
+    </div>
+
+    <script>
+        const URL = "http://127.0.0.1:5000/";
+
+        fetch(URL + 'productos')
+            .then(function (response) {
+                if (response.ok) {
+                    return response.json();
+                } else {
+                    throw new Error('Error al obtener los productos');
+                }
+            })
+            .then(function (data) {
+                let tablaProductos = document.getElementById('tablaProductos');
+
+                for (let producto of data) {
+                    let fila = document.createElement('tr');
+                    fila.innerHTML = '<td>' + producto.idgenero + '</td>' +
+                        '<td>' + producto.nombre + '</td>' +
+                        '<td>' + producto.album + '</td>' +
+                        '<td>' + producto.anio + '</td>' +
+                        '<td>' + producto.descripcion + '</td>' +
+                        '<td><img src="../static/img/' + producto.imagen + '" alt="Imagen del producto" style="width: 100px;"></td>' +
+                        '<td>' + producto.precio + '</td>';
+
+                    tablaProductos.appendChild(fila);
+                }
+            })
+            .catch(function (error) {
+                alert('Error al obtener los productos: ' + error.message);
+            });
+    </script>
+</body>
+</html>
